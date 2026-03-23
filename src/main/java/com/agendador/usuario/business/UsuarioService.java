@@ -31,10 +31,10 @@ public class UsuarioService {
         try {
             boolean existe = verificaEmailExistente(email);
             if(existe){
-                throw new ConflictException("email ja cadastrado" + email);
+                throw new ConflictException("email ja cadastrado " + email);
             }
         }catch (ConflictException e){
-            throw new ConflictException("Email ja cadastrado", e.getCause());
+            throw new ConflictException("Email ja cadastrado ", e.getCause());
         }
     }
 
